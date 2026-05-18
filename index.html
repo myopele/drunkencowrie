@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emerging With Wisdom | Iyawos Coming Off the Mat</title>
+  <meta name="description" content="A 4-week SGI-style course for Iyawos preparing to come off the mat and walk forward in disciplined priestly life." />
+
+  <style>
+    :root{
+      --bg:#07080c;
+      --bg2:#10131d;
+      --panel:#151a24;
+      --panel2:#1d2433;
+      --gold:#d4af37;
+      --gold2:#f3d878;
+      --text:#f7f0df;
+      --muted:#c9bfaa;
+      --green:#80c76f;
+      --blue:#69a9ff;
+      --purple:#b78cff;
+      --red:#e66a4e;
+      --line:rgba(212,175,55,.28);
+      --shadow:0 18px 60px rgba(0,0,0,.45);
+      --radius:24px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:
+        radial-gradient(circle at top left, rgba(212,175,55,.18), transparent 34%),
+        radial-gradient(circle at top right, rgba(105,169,255,.12), transparent 32%),
+        linear-gradient(180deg, #050609 0%, var(--bg) 42%, #030305 100%);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    a{color:var(--gold2); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    .wrap{
+      width:min(var(--max), calc(100% - 28px));
+      margin:auto;
+    }
+
+    header{
+      padding:28px 0 18px;
+      border-bottom:1px solid var(--line);
+      position:relative;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      justify-content:space-between;
+      flex-wrap:wrap;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+    }
+
+    .logo{
+      width:72px;
+      height:72px;
+      object-fit:contain;
+      border-radius:18px;
+      box-shadow:0 0 24px rgba(212,175,55,.24);
+    }
+
+    .brand-text{
+      font-size:.9rem;
+      color:var(--muted);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      font-size:clamp(2.2rem, 6vw, 5rem);
+      line-height:1;
+      margin:34px 0 10px;
+      text-align:center;
+      color:var(--gold2);
+      text-shadow:0 0 24px rgba(212,175,55,.25);
+    }
+
+    .subtitle{
+      text-align:center;
+      font-size:clamp(1.05rem, 2.6vw, 1.45rem);
+      color:var(--muted);
+      max-width:920px;
+      margin:0 auto 24px;
+    }
+
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:10px;
+      margin:22px 0 10px;
+    }
+
+    .pill{
+      padding:10px 14px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      border-radius:999px;
+      font-size:.92rem;
+      color:var(--text);
+      box-shadow:inset 0 0 18px rgba(212,175,55,.05);
+    }
+
+    .portal-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(170px, 1fr));
+      gap:12px;
+      margin:24px 0 12px;
+    }
+
+    .portal{
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.025));
+      padding:14px;
+      border-radius:18px;
+      text-align:center;
+      color:var(--gold2);
+      box-shadow:var(--shadow);
+      font-weight:bold;
+    }
+
+    section{
+      margin:28px 0;
+    }
+
+    .hero-card{
+      background:
+        linear-gradient(135deg, rgba(212,175,55,.15), rgba(255,255,255,.035)),
+        var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card h2,
+    .module h2{
+      margin-top:0;
+      color:var(--gold2);
+      font-size:clamp(1.7rem, 3vw, 2.4rem);
+      line-height:1.15;
+    }
+
+    .quote{
+      border-left:4px solid var(--gold);
+      padding:14px 18px;
+      background:rgba(212,175,55,.08);
+      border-radius:0 18px 18px 0;
+      color:var(--gold2);
+      font-size:1.15rem;
+      margin:20px 0 0;
+    }
+
+    .course-map{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:16px;
+    }
+
+    .map-card{
+      background:var(--panel);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .map-card h3{
+      margin:0 0 8px;
+      color:var(--gold2);
+      font-size:1.25rem;
+    }
+
+    .map-card .week{
+      display:inline-block;
+      padding:4px 10px;
+      border-radius:999px;
+      background:rgba(212,175,55,.12);
+      color:var(--gold2);
+      border:1px solid var(--line);
+      font-size:.8rem;
+      margin-bottom:10px;
+    }
+
+    .module{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.055), rgba(255,255,255,.02)),
+        var(--panel);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:26px;
+      box-shadow:var(--shadow);
+    }
+
+    .module:nth-of-type(1){border-top:4px solid var(--green)}
+    .module:nth-of-type(2){border-top:4px solid var(--blue)}
+    .module:nth-of-type(3){border-top:4px solid var(--purple)}
+    .module:nth-of-type(4){border-top:4px solid var(--red)}
+
+    .module-tag{
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.12em;
+      font-size:.85rem;
+      margin-bottom:6px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+      gap:16px;
+      margin-top:18px;
+    }
+
+    .box{
+      background:rgba(0,0,0,.22);
+      border:1px solid rgba(212,175,55,.2);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .box h3{
+      margin:0 0 10px;
+      color:var(--gold2);
+      font-size:1.15rem;
+    }
+
+    ul{
+      margin:0;
+      padding-left:22px;
+    }
+
+    li{margin:6px 0}
+
+    .practice{
+      background:rgba(212,175,55,.08);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      margin-top:18px;
+    }
+
+    .practice strong{
+      color:var(--gold2);
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:14px;
+      overflow:hidden;
+      border-radius:16px;
+    }
+
+    th,td{
+      border:1px solid rgba(212,175,55,.22);
+      padding:12px;
+      vertical-align:top;
+    }
+
+    th{
+      color:var(--gold2);
+      background:rgba(212,175,55,.1);
+      text-align:left;
+    }
+
+    td{
+      background:rgba(0,0,0,.16);
+    }
+
+    .closing{
+      text-align:center;
+      background:
+        radial-gradient(circle at center, rgba(212,175,55,.16), transparent 55%),
+        var(--panel2);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .closing h2{
+      color:var(--gold2);
+      margin-top:0;
+    }
+
+    .affirmation{
+      font-size:1.22rem;
+      color:var(--text);
+      max-width:780px;
+      margin:18px auto 0;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      margin-top:38px;
+      padding:22px 0 34px;
+      color:var(--muted);
+      font-size:.92rem;
+      text-align:center;
+    }
+
+    .small{
+      font-size:.92rem;
+      color:var(--muted);
+    }
+
+    @media print{
+      body{background:#fff; color:#000}
+      .portal-grid,.pillrow{display:none}
+      .module,.hero-card,.box,.practice,.closing{
+        box-shadow:none;
+        background:#fff;
+        color:#000;
+        break-inside:avoid;
+      }
+      h1,h2,h3,.quote,a{color:#000}
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="topbar">
+        <a class="brand" href="https://swamiginstitute.com">
+          <img class="logo" src="https://swamiginstitute.com/swamig.gif" alt="SwamiG Institute Logo" />
+          <div>
+            <div class="brand-text">SwamiG Institute</div>
+            <div class="small">Priestly Formation • Iwa • Devotion • Wisdom</div>
+          </div>
+        </a>
+      </div>
+
+      <h1>Emerging With Wisdom</h1>
+      <p class="subtitle">
+        A 4-Week Course for Iyawos Coming Off the Mat:
+        From Sacred Covering to Accountable Priestly Living
+      </p>
+
+      <div class="pillrow">
+        <a class="pill" href="#week1">Week 1: Remembering the Mat</a>
+        <a class="pill" href="#week2">Week 2: Iwa as Crown</a>
+        <a class="pill" href="#week3">Week 3: Re-entering the World</a>
+        <a class="pill" href="#week4">Week 4: Walking Forward</a>
+      </div>
+
+      <div class="portal-grid">
+        <a class="portal" href="https://4cowrieshell.com/index0">4 Cowrie Shell</a>
+        <a class="portal" href="https://16cowrie.com">16 Cowrie</a>
+        <a class="portal" href="https://myopele.com">My Opele</a>
+        <a class="portal" href="https://iamiyawo.com">I Am Iyawo</a>
+        <a class="portal" href="https://iamaborisha.com">I Am Aborisha</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+
+    <section class="hero-card">
+      <h2>Course Purpose</h2>
+      <p>
+        This course supports Iyawos as they prepare to come off the mat and enter
+        the next stage of spiritual responsibility. The mat has served as womb,
+        shrine, school, and sacred covering. Coming off the mat is not the end
+        of initiation; it is the beginning of disciplined priestly living.
+      </p>
+
+      <p>
+        The course emphasizes humility, Iwa, elder relationship, boundaries,
+        service, continued study, divination, and the careful transition from
+        protected spiritual formation into public life.
+      </p>
+
+      <div class="quote">
+        The mat prepared the priest. The world will test the priest.
+        Iwa must crown the priest.
+      </div>
+    </section>
+
+    <section>
+      <h2 style="color:var(--gold2); text-align:center;">4-Week Course Map</h2>
+
+      <div class="course-map">
+        <div class="map-card">
+          <span class="week">Week 1</span>
+          <h3>Remembering the Mat</h3>
+          <p>What was planted, what was removed, and what must now be protected.</p>
+        </div>
+
+        <div class="map-card">
+          <span class="week">Week 2</span>
+          <h3>Character After Initiation</h3>
+          <p>Iwa is the real crown. Speech, humility, restraint, and spiritual maturity.</p>
+        </div>
+
+        <div class="map-card">
+          <span class="week">Week 3</span>
+          <h3>Re-entering the World</h3>
+          <p>Family, work, social media, godfamily, boundaries, and sacred visibility.</p>
+        </div>
+
+        <div class="map-card">
+          <span class="week">Week 4</span>
+          <h3>Walking Forward</h3>
+          <p>Priesthood as lifelong accountability, service, study, and legacy.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="week1" class="module">
+      <div class="module-tag">Module 1 • Week 1</div>
+      <h2>Remembering the Mat: What Was Planted?</h2>
+
+      <p>
+        The first week invites the Iyawo to look back with reverence. The mat
+        was not only a place of rest or restriction. It was a sacred container
+        where old patterns were interrupted, new spiritual identity was planted,
+        and the relationship with Orisha was deepened.
+      </p>
+
+      <div class="grid-2">
+        <div class="box">
+          <h3>Teaching Goals</h3>
+          <ul>
+            <li>Understand the mat as womb, shrine, school, and spiritual container.</li>
+            <li>Reflect on what initiation planted in the Ori and spirit.</li>
+            <li>Identify what must be protected after coming off the mat.</li>
+            <li>Distinguish initiation from transformation.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Key Topics</h3>
+          <ul>
+            <li>The mat as rebirth.</li>
+            <li>Why restrictions mattered.</li>
+            <li>What changed in body, mind, spirit, and destiny.</li>
+            <li>Humility after spiritual elevation.</li>
+            <li>Protecting what Orisha planted.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="box">
+          <h3>Reflection Questions</h3>
+          <ul>
+            <li>What did the mat teach me?</li>
+            <li>What part of me had to die?</li>
+            <li>What part of me was reborn?</li>
+            <li>What am I still resisting?</li>
+            <li>What has my Orisha been shaping in me?</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Divination Integration</h3>
+          <p>Use Obi, four cowries, or the divination method permitted by the elder.</p>
+          <p><strong>Question:</strong></p>
+          <p>What lesson from my Iyawo year must I carry forward most carefully?</p>
+        </div>
+      </div>
+
+      <div class="practice">
+        <strong>Practice Assignment:</strong>
+        Write a one-page reflection titled:
+        <br><br>
+        <em>“What the Mat Gave Me, What the Mat Took From Me, and What I Must Now Protect.”</em>
+      </div>
+    </section>
+
+    <section id="week2" class="module">
+      <div class="module-tag">Module 2 • Week 2</div>
+      <h2>Character After Initiation: Iwa as the Real Crown</h2>
+
+      <p>
+        The second week teaches that the proof of initiation is not title,
+        clothing, beads, public recognition, or spiritual vocabulary. The true
+        crown is Iwa. The Iyawo must learn to carry Ashe with restraint,
+        humility, patience, and clean speech.
+      </p>
+
+      <div class="grid-2">
+        <div class="box">
+          <h3>Teaching Goals</h3>
+          <ul>
+            <li>Understand Iwa as the visible fruit of initiation.</li>
+            <li>Recognize spiritual arrogance and avoid it.</li>
+            <li>Practice speech discipline and emotional restraint.</li>
+            <li>Prepare for conflict without losing character.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>SGI Pillar Connection</h3>
+          <p><strong>Words of Power</strong></p>
+          <p>
+            The initiated person must learn that speech carries Ashe. A priest
+            must speak carefully, truthfully, and with restraint.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="box">
+          <h3>Key Topics</h3>
+          <ul>
+            <li>Iwa Pele as post-initiation responsibility.</li>
+            <li>The danger of “I know now” energy.</li>
+            <li>How to receive correction.</li>
+            <li>Managing conflict with elders, god-siblings, and family.</li>
+            <li>Speech as spiritual technology.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Reflection Questions</h3>
+          <ul>
+            <li>Has initiation made me softer or harder?</li>
+            <li>Do I listen better than before?</li>
+            <li>Where does pride still hide in me?</li>
+            <li>What old behavior could damage my new life?</li>
+            <li>What does my Orisha require from my character?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="practice">
+        <strong>Practice Assignment:</strong>
+        Create a personal <em>Post-Mat Code of Conduct</em> with 7 vows.
+        <br><br>
+        Example: “I will not use initiation as superiority.”
+        <br>
+        Example: “I will continue learning before teaching.”
+      </div>
+
+      <div class="practice">
+        <strong>Divination Question:</strong>
+        What character trait must I strengthen as I come off the mat?
+      </div>
+    </section>
+
+    <section id="week3" class="module">
+      <div class="module-tag">Module 3 • Week 3</div>
+      <h2>Re-entering the World: Boundaries, Service, and Visibility</h2>
+
+      <p>
+        The third week helps the Iyawo return to family, work, community,
+        godfamily, and public life without losing spiritual alignment. Coming
+        off the mat requires discernment. Not everything sacred should become
+        visible, posted, explained, or defended.
+      </p>
+
+      <div class="grid-2">
+        <div class="box">
+          <h3>Teaching Goals</h3>
+          <ul>
+            <li>Develop a healthy re-entry plan.</li>
+            <li>Understand what should remain private.</li>
+            <li>Build strong boundaries around Ori and Orisha.</li>
+            <li>Serve without overexposure or performance.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>SGI Pillar Connection</h3>
+          <p><strong>Radical Devotion</strong></p>
+          <p>
+            Devotion is not performance. Devotion is consistency, reverence,
+            and alignment when no one is watching.
+          </p>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Re-entry Planning Table</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Area</th>
+              <th>Boundary Needed</th>
+              <th>Sacred Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Family</td>
+              <td>What I will and will not explain.</td>
+              <td>Speak calmly, simply, and without argument.</td>
+            </tr>
+            <tr>
+              <td>Work</td>
+              <td>How I maintain spiritual discipline in ordinary life.</td>
+              <td>Practice punctuality, ethics, prayer, and patience.</td>
+            </tr>
+            <tr>
+              <td>Social Media</td>
+              <td>What I will and will not post.</td>
+              <td>Avoid sacred overexposure and spiritual performance.</td>
+            </tr>
+            <tr>
+              <td>Community</td>
+              <td>How I serve without ego.</td>
+              <td>Show up humbly and consistently.</td>
+            </tr>
+            <tr>
+              <td>Self-Care</td>
+              <td>How I protect Ori.</td>
+              <td>Rest, cleanse, pray, reflect, and consult divination.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2">
+        <div class="box">
+          <h3>Reflection Questions</h3>
+          <ul>
+            <li>What parts of my spiritual life are public?</li>
+            <li>What parts must remain private?</li>
+            <li>Who supports my destiny?</li>
+            <li>Who drains my Ori?</li>
+            <li>How do I serve without losing myself?</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Divination Integration</h3>
+          <p><strong>Question:</strong></p>
+          <p>Where do I need stronger boundaries as I re-enter the world?</p>
+        </div>
+      </div>
+
+      <div class="practice">
+        <strong>Practice Assignment:</strong>
+        Create a written <em>Re-entry Plan</em> for family, work, social media,
+        community, and personal spiritual care.
+      </div>
+    </section>
+
+    <section id="week4" class="module">
+      <div class="module-tag">Module 4 • Week 4</div>
+      <h2>Walking Forward: Priesthood, Accountability, and Legacy</h2>
+
+      <p>
+        The final week frames post-mat life as a lifelong path of accountability,
+        study, service, and legacy. Coming off the mat does not mean coming out
+        of discipline. The Iyawo becomes a continuing student of Orisha, elder
+        wisdom, Odu, ritual ethics, song, prayer, and service.
+      </p>
+
+      <div class="grid-2">
+        <div class="box">
+          <h3>Teaching Goals</h3>
+          <ul>
+            <li>Understand priesthood as service, not status.</li>
+            <li>Create a 12-month post-mat spiritual plan.</li>
+            <li>Identify accountability structures.</li>
+            <li>Commit to ongoing study and elder relationship.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>SGI Pillar Connection</h3>
+          <p><strong>Infinite Wisdom</strong></p>
+          <p>
+            The Iyawo becomes a lifelong student. Wisdom grows through practice,
+            humility, correction, reflection, and service.
+          </p>
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>12-Month Post-Mat Plan</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Commitment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Daily Practice</td>
+              <td>Prayer, Ori care, gratitude, reflection, and disciplined conduct.</td>
+            </tr>
+            <tr>
+              <td>Weekly Practice</td>
+              <td>Divination, study, elder check-in, and service.</td>
+            </tr>
+            <tr>
+              <td>Monthly Practice</td>
+              <td>Cleansing, offering, community contribution, and review.</td>
+            </tr>
+            <tr>
+              <td>Study Focus</td>
+              <td>Orisha, Odu, songs, prayers, ritual ethics, and lineage teachings.</td>
+            </tr>
+            <tr>
+              <td>Accountability</td>
+              <td>Elder, mentor, god-sibling, spiritual friend, or study circle.</td>
+            </tr>
+            <tr>
+              <td>Service</td>
+              <td>How I will serve without ego or spiritual performance.</td>
+            </tr>
+            <tr>
+              <td>Protection</td>
+              <td>How I will guard my Ori, boundaries, speech, and energy.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid-2">
+        <div class="box">
+          <h3>Reflection Questions</h3>
+          <ul>
+            <li>What kind of priest am I becoming?</li>
+            <li>Who holds me accountable?</li>
+            <li>What must I study next?</li>
+            <li>How will I serve my Orisha?</li>
+            <li>What legacy do I want to leave?</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <h3>Final Divination Integration</h3>
+          <p><strong>Question:</strong></p>
+          <p>What is my next right step after coming off the mat?</p>
+        </div>
+      </div>
+
+      <div class="practice">
+        <strong>Final Assignment:</strong>
+        Complete your 12-month post-mat spiritual plan and prepare a 3–5 minute
+        statement beginning with:
+        <br><br>
+        <em>“As I come off the mat, I commit to…”</em>
+      </div>
+    </section>
+
+    <section class="closing">
+      <h2>Closing Affirmation</h2>
+      <p class="affirmation">
+        May your Ori remain cool.<br>
+        May your Orisha guide your steps.<br>
+        May your Iwa become your crown.<br>
+        May your speech carry Ashe.<br>
+        May your service honor the ancestors.<br>
+        May you rise from the mat and walk with wisdom.
+      </p>
+    </section>
+
+    <section class="hero-card">
+      <h2>Suggested Weekly Class Structure</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Segment</th>
+            <th>Suggested Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Opening prayer / invocation</td>
+            <td>10 minutes</td>
+          </tr>
+          <tr>
+            <td>Teaching</td>
+            <td>30 minutes</td>
+          </tr>
+          <tr>
+            <td>Group discussion</td>
+            <td>25 minutes</td>
+          </tr>
+          <tr>
+            <td>Divination reflection</td>
+            <td>15 minutes</td>
+          </tr>
+          <tr>
+            <td>Assignment explanation</td>
+            <td>10 minutes</td>
+          </tr>
+          <tr>
+            <td>Closing prayer</td>
+            <td>10 minutes</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>
+        © SwamiG Institute • Emerging With Wisdom • Iyawos Coming Off the Mat
+      </p>
+      <p>
+        The mat prepared the priest. The world will test the priest. Iwa must crown the priest.
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
